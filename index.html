@@ -1,118 +1,137 @@
 <!DOCTYPE HTML>
 <!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Miniport by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
-	<style>
-  #interests .container {
-    text-align: left;
-  }
-</style>
+<html lang="en">
+<head>
+  <title>한종건의 웹 페이지</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <!-- Miniport 기본 CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- JS 비활성/초기 로딩용 보정 CSS -->
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-	<head>
-		<title>한종건의 웹 페이지</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+  <!-- 커스텀 오버라이드 -->
+  <style>
+    /* Interests 왼쪽 정렬 */
+    #interests .container { text-align: left; }
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#interests">Research</a></li>
-					<li><a href="#projects">Projects</a></li>
-				</ul>
-			</nav>
+    /* Projects 왼쪽 정렬 + 카드 인라인 스타일 대체 가능(선택 사항) */
+    #projects .container { text-align: left; }
 
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/profile01.jpeg" alt="" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h2><strong>Han Jong-geon</strong></h2>
-							</header>
-							<p style="font-size:18px;">I'm a master's student in the Department of Statistics at Seoul National University.</p>
-							<ul>
-  							<li>Email: hih1210@snu.ac.kr</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</article>
+    /* Home 섹션 소개문 폰트 크기 조정 */
+    #top p { font-size: 16px; }  /* 필요하면 14~18px 사이로 조정 */
 
-		<!-- Interests -->
-<article id="interests" class="wrapper style2">
-  <div class="container">
-    <header>
-      <h2>My main research and academic interests</h2>
-    </header>
-    <ul>
-      <li>Bayesian Inference</li>
-      <li>Density Estimation</li>
-      <li>Machine Learning</li>
-	  <li>Small Area Estimation</li>
+    /* 프로젝트 카드(선택: 인라인 대신 클래스 사용하고 싶을 때) */
+    .project-card {
+      display: flex; align-items: center; gap: 15px;
+      margin-bottom: 20px; border: 1px solid #ccc; border-radius: 10px;
+      padding: 15px; background-color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .project-card img { width: 150px; height: auto; border-radius: 8px; }
+    .project-card h3 { margin: 0; font-size: 18px; }
+    .project-card p { margin: 6px 0 0; }
+  </style>
+</head>
+<body class="is-preload">
+
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="container">
+      <li><a href="#top">Top</a></li>
+      <li><a href="#interests">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <!-- <li><a href="#contact">Contact</a></li> 필요하면 주석 해제 -->
     </ul>
-  </div>
-</article>
+  </nav>
 
-<!-- Projects -->
-<article id="projects" class="wrapper style3">
-  <div class="container" style="text-align: left;">
-    <header>
-      <h2>My Projects and Research</h2>
-      <p>Completed and ongoing work in which I have been involved</p>
-    </header>
-
-    <!-- 첫 번째 프로젝트 -->
-    <div style="display: flex; align-items: center; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 10px; padding: 15px; background-color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-      <img src="images/goral.jpg" alt="Goral" style="width: 150px; height: auto; margin-right: 15px; border-radius: 8px;">
-      <div>
-        <h3 style="margin: 0; font-size: 18px;">Population Estimation of Goral</h3>
-        <p style="margin: 5px 0 0;">Application of RJMCMC (Herliansyah et&nbsp;al., 2025) in R.</p>
+  <!-- Home -->
+  <article id="top" class="wrapper style1">
+    <div class="container">
+      <div class="row">
+        <div class="col-4 col-5-large col-12-medium">
+          <span class="image fit"><img src="images/profile01.jpeg" alt="Profile photo" /></span>
+        </div>
+        <div class="col-8 col-7-large col-12-medium">
+          <header>
+            <h2><strong>Han Jong-geon</strong></h2>
+          </header>
+          <p>I'm a master's student in the Department of Statistics at Seoul National University.</p>
+          <ul>
+            <li>Email: hih1210@snu.ac.kr</li>
+          </ul>
+        </div>
       </div>
     </div>
+  </article>
 
-    <!-- 두 번째 프로젝트 -->
-    <div style="display: flex; align-items: center; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 10px; padding: 15px; background-color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-      <img src="images/smallarea.png" alt="Small Area Estimation" style="width: 150px; height: auto; margin-right: 15px; border-radius: 8px;">
-      <div>
-        <h3 style="margin: 0; font-size: 18px;">Applying Alternative Algorithms for Modeling in Small Area Estimation</h3>
-        <p style="margin: 5px 0 0;">Implemented in R.</p>
-      </div>
+  <!-- Interests -->
+  <article id="interests" class="wrapper style2">
+    <div class="container">
+      <header>
+        <h2>My main research and academic interests</h2>
+      </header>
+      <ul>
+        <li>Bayesian Inference</li>
+        <li>Density Estimation</li>
+        <li>Machine Learning</li>
+        <li>Small Area Estimation</li>
+      </ul>
     </div>
+  </article>
 
-  </div>
-</article>
+  <!-- Projects -->
+  <article id="projects" class="wrapper style3">
+    <div class="container">
+      <header>
+        <h2>My Projects and Research</h2>
+        <p>Completed and ongoing work in which I have been involved</p>
+      </header>
 
-		<!-- Contact -->
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<div class="row">
-						<div class="col-12">
-						</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</div>
-			</article>
+      <!-- 첫 번째 프로젝트 (클래스로 깔끔하게) -->
+      <div class="project-card">
+        <img src="images/goral.jpg" alt="Goral project image">
+        <div>
+          <h3>Population Estimation of Goral</h3>
+          <p>Application of RJMCMC (Herliansyah et&nbsp;al., 2025) in R.</p>
+        </div>
+      </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <!-- 두 번째 프로젝트 -->
+      <div class="project-card">
+        <img src="images/smallarea.png" alt="Small Area Estimation project image">
+        <div>
+          <h3>Applying Alternative Algorithms for Modeling in Small Area Estimation</h3>
+          <p>Implemented in R.</p>
+        </div>
+      </div>
 
-	</body>
+    </div>
+  </article>
+
+  <!-- Contact -->
+  <article id="contact" class="wrapper style4">
+    <div class="container medium">
+      <!-- 필요하면 Contact 내용 추가 -->
+      <footer>
+        <ul id="copyright">
+          <li>&copy; Han Jong-geon. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+  </article>
+
+  <!-- Scripts (순서 유지) -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
 </html>
